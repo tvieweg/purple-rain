@@ -15,6 +15,9 @@
 		698AB3341CCADE610021691C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698AB3321CCADE610021691C /* LaunchScreen.storyboard */; };
 		698AB33F1CCADE610021691C /* Purple_RainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 698AB33E1CCADE610021691C /* Purple_RainTests.m */; };
 		698AB34A1CCADE610021691C /* Purple_RainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 698AB3491CCADE610021691C /* Purple_RainUITests.m */; };
+		698AB35A1CCAE1140021691C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698AB3591CCAE1140021691C /* CoreLocation.framework */; };
+		698AB35E1CCAE30A0021691C /* Datasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 698AB35D1CCAE30A0021691C /* Datasource.m */; };
+		698AB3611CCAE7BB0021691C /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 698AB3601CCAE7BB0021691C /* YQL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		698AB3451CCADE610021691C /* Purple RainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Purple RainUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		698AB3491CCADE610021691C /* Purple_RainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Purple_RainUITests.m; sourceTree = "<group>"; };
 		698AB34B1CCADE610021691C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698AB3591CCAE1140021691C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		698AB35C1CCAE30A0021691C /* Datasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datasource.h; sourceTree = "<group>"; };
+		698AB35D1CCAE30A0021691C /* Datasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datasource.m; sourceTree = "<group>"; };
+		698AB35F1CCAE7BB0021691C /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
+		698AB3601CCAE7BB0021691C /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698AB35A1CCAE1140021691C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				698AB3231CCADE610021691C /* Purple Rain */,
+				698AB35B1CCAE19C0021691C /* Frameworks */,
 				698AB33D1CCADE610021691C /* Purple RainTests */,
 				698AB3481CCADE610021691C /* Purple RainUITests */,
 				698AB3221CCADE610021691C /* Products */,
@@ -101,10 +111,14 @@
 		698AB3231CCADE610021691C /* Purple Rain */ = {
 			isa = PBXGroup;
 			children = (
+				698AB35C1CCAE30A0021691C /* Datasource.h */,
+				698AB35D1CCAE30A0021691C /* Datasource.m */,
 				698AB3271CCADE610021691C /* AppDelegate.h */,
 				698AB3281CCADE610021691C /* AppDelegate.m */,
 				698AB32A1CCADE610021691C /* ViewController.h */,
 				698AB32B1CCADE610021691C /* ViewController.m */,
+				698AB35F1CCAE7BB0021691C /* YQL.h */,
+				698AB3601CCAE7BB0021691C /* YQL.m */,
 				698AB32D1CCADE610021691C /* Main.storyboard */,
 				698AB3301CCADE610021691C /* Assets.xcassets */,
 				698AB3321CCADE610021691C /* LaunchScreen.storyboard */,
@@ -138,6 +152,14 @@
 				698AB34B1CCADE610021691C /* Info.plist */,
 			);
 			path = "Purple RainUITests";
+			sourceTree = "<group>";
+		};
+		698AB35B1CCAE19C0021691C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				698AB3591CCAE1140021691C /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +229,14 @@
 				TargetAttributes = {
 					698AB3201CCADE610021691C = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					698AB3391CCADE610021691C = {
 						CreatedOnToolsVersion = 7.3;
@@ -271,7 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				698AB32C1CCADE610021691C /* ViewController.m in Sources */,
+				698AB3611CCAE7BB0021691C /* YQL.m in Sources */,
 				698AB3291CCADE610021691C /* AppDelegate.m in Sources */,
+				698AB35E1CCAE30A0021691C /* Datasource.m in Sources */,
 				698AB3261CCADE610021691C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +530,7 @@
 				698AB3501CCADE610021691C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		698AB3511CCADE610021691C /* Build configuration list for PBXNativeTarget "Purple RainTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +539,7 @@
 				698AB3531CCADE610021691C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		698AB3541CCADE610021691C /* Build configuration list for PBXNativeTarget "Purple RainUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +548,7 @@
 				698AB3561CCADE610021691C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
